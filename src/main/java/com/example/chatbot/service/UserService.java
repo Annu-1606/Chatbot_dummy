@@ -5,6 +5,9 @@ import com.example.chatbot.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import java.util.List;
+import java.util.stream.Collectors;
+
 
 
 @Service
@@ -32,5 +35,19 @@ public class UserService {
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
+
+    public List<User> getAllUsers() {
+    List<User> users = userRepository.findAll(); // fetch users from DB
+    System.out.println("Users in DB: " + users);  // debug output
+    return users;
 }
+
+    public List<User> getAllUsersExcept(String username) {
+    return userRepository.findByUsernameNot(username);
+}
+
+
+
+}
+
 

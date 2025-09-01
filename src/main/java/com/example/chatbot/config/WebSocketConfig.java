@@ -24,4 +24,6 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         // Endpoint for clients to connect to websocket (SockJS fallback enabled)
         registry.addEndpoint("/ws").withSockJS();
     }
+
+    
 }

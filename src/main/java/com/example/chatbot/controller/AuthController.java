@@ -35,19 +35,21 @@ public class AuthController {
 public String loginPage(@RequestParam(value = "error", required = false) String error,
                         @RequestParam(value = "logout", required = false) String logout,
                         Model model) {
-    // error from Spring Security
+    // Spring Security login errors
     if (error != null) {
         model.addAttribute("error", "Invalid username or password");
     }
 
+    // logout message
     if (logout != null) {
         model.addAttribute("message", "You have been logged out successfully");
     }
 
-    // flash message from registration (automatically added to model)
-    // no need to check "registered" param
-    return "login"; 
+    // flash attributes from registration are automatically in the model
+    // just do not override "message" here
+    return "login";
 }
+
 
 @PostMapping("/register")
 public String register(@RequestParam String username,
