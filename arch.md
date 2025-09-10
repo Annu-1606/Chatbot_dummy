@@ -1,6 +1,5 @@
 # Architecture Document
-**Project:** Cloud-based Chat Bot  
-**Owner:** Ikshita  
+**Project:** Cloud-based Chat Bot   
 **Version:** 0.1 (Draft)  
 **Date:** 2025-08-31  
 
@@ -17,7 +16,6 @@
 ---
 
 ## 2. High-Level Architecture
-```mermaid
 flowchart TD
     A[User Browser] <--> B[Spring Boot App]
     B <--> C[(H2 DB - optional)]
@@ -28,7 +26,6 @@ sequenceDiagram
     participant U as User (Browser)
     participant B as Spring Boot App
     participant DB as Database (Optional)
-
     U->>B: Send message
     B->>B: Process message (rule-based logic)
     B->>DB: Save chat (optional)
