@@ -1,6 +1,5 @@
 # Modules & Code Structure
-**Project:** Cloud-based Chat Bot  
-**Owner:** Ikshita  
+**Project:** Cloud-based Chat Bot   
 **Version:** 0.1 (Draft)  
 **Date:** 2025-08-31  
 
