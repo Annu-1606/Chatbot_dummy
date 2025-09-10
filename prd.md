@@ -1,6 +1,5 @@
 # Project Requirements Document (PRD)
-**Project:** Cloud-based Chat Bot  
-**Owner:** Ikshita  
+**Project:** Cloud-based Chat Bot   
 **Version:** 0.1 (Draft)  
 **Date:** 2025-08-31  
 
@@ -14,11 +13,10 @@ The goal is to develop a cloud-based chat bot application that provides a browse
 ## 2. Goals & Non-Goals
 ### Goals
 - Provide a simple, intuitive browser-based chat UI.
-- Enable conversational interaction with a rule-based or simple NLP-backed chatbot.
+- Enable conversational interaction with a rule-based chatbot.
 - Host backend server on a cloud VM within free tier limits.
 - Containerize the application for consistent deployment using Docker.
 - Ensure secure connectivity (e.g., HTTPS, API tokens).
-- Allow easy extension for future features like advanced NLP or multi-user support.
 
 ### Non-Goals
 - Not aiming for advanced AI/LLM chatbot in the first release.
@@ -37,8 +35,7 @@ The goal is to develop a cloud-based chat bot application that provides a browse
 ## 4. User Stories
 1. As a **user**, I want to access a chatbot in my browser, so I can interact with it easily without setup.
 2. As a **developer**, I want the chatbot hosted in the cloud, so I don’t have to run it locally.
-3. As a **user**, I want my communication to be secure, so my data is not exposed in transit.
-4. As a **developer**, I want to deploy using Docker, so I can ensure portability and consistency across environments.
+4. As a **developer**, I want to it deploy using Docker, so I can ensure portability and consistency across environments.
 
 ---
 
@@ -50,19 +47,12 @@ The goal is to develop a cloud-based chat bot application that provides a browse
 
 ### 5.2 Backend (Spring Boot)
 - REST endpoints for chat interactions.
-- Session handling (basic user session tracking).
 - Rule-based chatbot responses (initially keyword-based).
-- Future extensibility for NLP integration.
 
 ### 5.3 Hosting & Infrastructure
 - Deployment on Cloud VM (AWS, GCP, or Azure free tier).
 - Application containerized via Docker.
 - Expose ports securely for browser access.
-
-### 5.4 Security
-- HTTPS setup with self-signed or free TLS certificate (e.g., Let’s Encrypt).
-- Basic input validation and sanitization.
-- Optional API key/token for securing backend endpoints.
 
 ---
 
@@ -94,22 +84,13 @@ The goal is to develop a cloud-based chat bot application that provides a browse
 ## 9. Future Enhancements (v2+)
 - Multi-user sessions with persistent chat history.
 - Integration with NLP APIs (Dialogflow, Rasa, or LLMs).
-- Admin dashboard for analytics (chat volume, user stats).
 - Support for plugins (FAQ bot, customer support integration).
 - Mobile app wrappers for iOS/Android.
 
 ---
 
-## 10. Timeline (High-Level)
-1. **Week 1-2:** Setup Spring Boot project with Thymeleaf UI.
-2. **Week 3:** Implement basic chatbot logic (rule-based).
-3. **Week 4:** Dockerize application.
-4. **Week 5:** Deploy to cloud VM.
-5. **Week 6:** Add HTTPS & basic security.
 
----
-
-## 11. Open Questions
+## 10. Open Questions
 - Which cloud provider will be used (AWS, GCP, Azure)?
 - Should chat history be stored (H2 vs external DB)?
 - What chatbot logic to start with (rules, regex, small NLP)?
